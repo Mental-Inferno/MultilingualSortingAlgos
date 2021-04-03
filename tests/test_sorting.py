@@ -1,10 +1,20 @@
 from SortingAlgorithmPython import SortingPython
+import numpy as np
 
-SortingPython = SortingPython.SortingPython()
+sortingObj = SortingPython.SortPython()
 
-arr = [12,11,13,5,6,7]
+# Merge sort test
+arr = np.random.randint(1,50,10)
 print("Given array is", end="\n")
 print(arr)
-arr = SortingPython.merge(arr)
-print("Sorted array is: ", end="\n")
+sorted_arr = sortingObj.mergeSort(arr)
+print("Sorted array with merge sort is: ", end="\n")
+print(sorted_arr)
+
+# Quick sort test
+arr = np.random.randint(1,50,10)
+print("Given array is", end="\n")
 print(arr)
+sorted_arr = sortingObj.quickSort(arr)
+print("Sorted array with merge sort is: ", end="\n")
+print(sorted_arr)
